@@ -17,6 +17,12 @@ public class MainActivity extends AppCompatActivity {
                 showToast("Test jenkins 2");
             }
         });
+        findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showToast("update new feature 2");
+            }
+        });
     }
     private void showToast(String msg){
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
