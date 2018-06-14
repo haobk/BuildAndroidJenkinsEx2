@@ -19,6 +19,29 @@ android {
     lintOptions {
         abortOnError false
     }
+    flavorDimensions "default"
+    productFlavors {
+        def PRO_VERSION = "PRO_VERSION"
+        def FINGER_FLAVOR = "FINGER_FLAVOR"
+        Fingerfree {
+            buildConfigField "boolean", PRO_VERSION, "false"
+            buildConfigField "boolean", FINGER_FLAVOR, "true"
+        }
+        Fingerpro {
+            applicationId 'com.tohsoft.androidjekinex2.pro'
+            buildConfigField "boolean", PRO_VERSION, "true"
+            buildConfigField "boolean", FINGER_FLAVOR, "true"
+        }
+
+        Applock2free {
+            applicationId "com.tohsoft.androidjekinex2new"
+            buildConfigField "boolean", PRO_VERSION, "false"
+            buildConfigField "boolean", FINGER_FLAVOR, "false"
+            manifestPlaceholders = [excludeFlag: "false"]
+        }
+
+    }
+
 }
 
 dependencies {
