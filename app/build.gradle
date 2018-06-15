@@ -6,8 +6,8 @@ android {
         applicationId "com.tohsoft.androidjekinex2"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName System.getProperty('VERSION_CODE')
+        versionCode System.getProperty('VERSION_CODE') as Integer ?: 1
+        versionName System.getProperty('VERSION_NAME') as String ?:"1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
