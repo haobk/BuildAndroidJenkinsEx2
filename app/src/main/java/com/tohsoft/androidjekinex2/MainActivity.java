@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.imv);
 
         Glide.with(this).load("http://goo.gl/gEgYUd").into(imageView);
+        findViewById(R.id.btn_theme).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showToast("theme feacture!");
+            }
+        });
     }
 
     private void showToast(String msg){
