@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((TextView)findViewById(R.id.app_id)).setText(BuildConfig.APPLICATION_ID);
+        ((TextView)findViewById(R.id.app_id)).setText(BuildConfig.APPLICATION_ID + "|" + BuildConfig.BUILD_TYPE);
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
