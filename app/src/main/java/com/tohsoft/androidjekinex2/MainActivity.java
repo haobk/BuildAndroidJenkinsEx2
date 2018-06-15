@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        ((TextView)findViewById(R.id.app_id)).setText(BuildConfig.APPLICATION_ID + "|" + BuildConfig.BUILD_TYPE);
+        ((TextView)findViewById(R.id.app_id)).setText(BuildConfig.APPLICATION_ID + "|" + BuildConfig.BUILD_TYPE + "\n|" +
+                BuildConfig.VERSION_NAME);
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
